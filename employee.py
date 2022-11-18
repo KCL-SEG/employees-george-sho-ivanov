@@ -8,9 +8,9 @@ class Employee:
 
     def get_pay(self):
         if (self.commission):
-            return self.get_pay() + self.commission.value
+            return self.get_pay_root() + self.commission.value
         else :
-            return self.get_pay() 
+            return self.get_pay_root() 
 
     def __str__(self):
         if (self.commission):
@@ -36,7 +36,7 @@ class MonthlyEmployee(Employee):
     def get_description(self):
         return f"a monthly salary of {self.salary}"
 
-    def get_pay(self):
+    def get_pay_root(self):
         return self.salary
 
 class ContractEmployee(Employee):
@@ -48,7 +48,7 @@ class ContractEmployee(Employee):
     def get_description(self):
         return f"a contract of {self.contract_hours} hours at {self.contract_rate}/hour"
 
-    def get_pay(self):
+    def get_pay_root(self):
         return self.contract_hours * self.contract_rate
 
 
