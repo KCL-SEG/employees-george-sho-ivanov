@@ -20,12 +20,12 @@ class Employee:
 
 class ContractCommission:
     def __init__(self, contract_num, contract_price):
-        self.description = f"a comission for {contract_num} contract(s) at {contract_price}/contract"
+        self.description = f"a commission for {contract_num} contract(s) at {contract_price}/contract"
         self.value = contract_num * contract_price
 
 class BonusCommission:
     def __init__(self, contract_price):
-        self.description = f"a comission for {contract_price}"
+        self.description = f"a commission for {contract_price}"
         self.value = contract_price
 
 class MonthlyEmployee(Employee):
